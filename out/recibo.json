@@ -1,0 +1,104 @@
+{
+  "titulo": "Recibo Lupa · acciones tokenizadas como colateral + pago x402",
+  "generado": "2026-10-26T20:31:17.465Z",
+  "autorizado": [
+    {
+      "accion": "Depositar colateral",
+      "detalle": "hasta 0,0592 AAPLc, queda a tu nombre en Aave v4",
+      "vence": "1793124349"
+    },
+    {
+      "accion": "Pedir prestado",
+      "detalle": "hasta 5 USDC, solo a la wallet de pagos del agente",
+      "vence": "1793124349"
+    },
+    {
+      "accion": "Pagar endpoint x402",
+      "detalle": "hasta 0,002 USDC, solo al vendedor 0x8d3b609414F0d69ba2f99574F85b00F6b06Fd509",
+      "vence": "1793124349"
+    }
+  ],
+  "ejecutado": [
+    {
+      "red": "FORK",
+      "accion": "Depósito de 0,0592 AAPLc como colateral",
+      "tx": "0xf386814b712ee43a5f4ca1acfd4bc18f60cc9337205886034fa3a3eef5070c07"
+    },
+    {
+      "red": "FORK",
+      "accion": "Préstamo de 5 USDC",
+      "tx": "0x45ee080aa8a500ff712fa8420c833e338f97fbd62a3f0f3ed74cc2272d533932"
+    },
+    {
+      "red": "FORK",
+      "accion": "Pago x402 de 0,001 USDC (EIP-3009)",
+      "tx": "0xd6afea5669889b8300cd82bd6500b9b255848d5b6c6aac7381baf378249776a8"
+    },
+    {
+      "red": "BASE SEPOLIA (real)",
+      "accion": "Pago x402 de 0,001 USDC de prueba",
+      "tx": "0x55f966b0ab4c195cd5cf142b7522f4fee7bcd88a71cd265f34d1db24ab3024e8",
+      "link": "https://sepolia.basescan.org/tx/0x55f966b0ab4c195cd5cf142b7522f4fee7bcd88a71cd265f34d1db24ab3024e8"
+    }
+  ],
+  "liquidado": {
+    "fork": {
+      "vendedorRecibio": "0.001 USDC",
+      "agenteQueda": "4.999 USDC",
+      "contratoRetiene": "0 USDC y 0 AAPLc"
+    },
+    "sepolia": {
+      "estado": "success",
+      "bloque": "50583663",
+      "facilitadorPagoGas": true,
+      "tx": "0x55f966b0ab4c195cd5cf142b7522f4fee7bcd88a71cd265f34d1db24ab3024e8",
+      "link": "https://sepolia.basescan.org/tx/0x55f966b0ab4c195cd5cf142b7522f4fee7bcd88a71cd265f34d1db24ab3024e8"
+    }
+  },
+  "riesgo": {
+    "hf": 3.1724844382803026,
+    "colateralUSD": 20.331056,
+    "deudaUSD": 4.99867694973519,
+    "cf": 0.78,
+    "precioAAPL": 343.43,
+    "precioLiquidacion": 108.25270594540865,
+    "caidaParaLiquidar": 0.6847896279856722,
+    "texto": "Holgado: la acción tendría que caer ~68% para que te liquiden."
+  },
+  "verificaciones": [
+    {
+      "que": "Mandato supply (fork) firmado por el usuario",
+      "ok": true
+    },
+    {
+      "que": "Mandato borrow (fork) firmado por el usuario",
+      "ok": true
+    },
+    {
+      "que": "Mandato pay (fork) firmado por el usuario",
+      "ok": true
+    },
+    {
+      "que": "Recibo supply (fork) firmado por el agente",
+      "ok": true
+    },
+    {
+      "que": "Recibo borrow (fork) firmado por el agente",
+      "ok": true
+    },
+    {
+      "que": "Recibo pay (fork) firmado por el agente",
+      "ok": true
+    },
+    {
+      "que": "Mandato de pago (Sepolia) firmado por el usuario",
+      "ok": true
+    }
+  ],
+  "avisos": [
+    "Las operaciones marcadas FORK corrieron en una copia local de Base mainnet (anvil). No existen en la red real.",
+    "En el fork el position manager se activó escribiendo storage del spoke (atajo de fork). Sin probar en mainnet, sin auditar.",
+    "El chequeo del mandato de pago es off-chain (runtime del agente). Depósito y préstamo se validan on-chain.",
+    "Elegibilidad Reg S de AAPLc desde Argentina: sin confirmar."
+  ]
+}

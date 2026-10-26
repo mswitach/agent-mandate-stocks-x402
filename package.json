@@ -1,0 +1,23 @@
+{
+  "name": "agent-mandate-stocks-x402",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "setup:contracts": "test -d contracts/lib/forge-std || git clone --depth 1 --branch v1.17.0 https://github.com/foundry-rs/forge-std contracts/lib/forge-std",
+    "fork": "anvil --fork-url ${UPSTREAM_RPC:-https://base-rpc.publicnode.com} --fork-block-number 53124300 --chain-id 8453 --port 8546",
+    "build:contracts": "cd contracts && forge build",
+    "test:contracts": "cd contracts && forge test -vv",
+    "e2e:fork": "node scripts/e2e-fork.mjs",
+    "pay:sepolia": "node scripts/pay-sepolia.mjs",
+    "receipt": "node scripts/build-receipt.mjs"
+  },
+  "dependencies": {
+    "@x402/core": "^2.28.0",
+    "@x402/evm": "^2.28.0",
+    "@x402/fetch": "^2.28.0",
+    "viem": "^2.57.11"
+  },
+  "version": "0.1.0",
+  "license": "MIT",
+  "description": "PoC: an AI agent borrows USDC against tokenized Apple stock (AAPLc) on Aave v4 under an EIP-712 user mandate, then pays an x402 endpoint. Testnet / local fork only."
+}

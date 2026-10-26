@@ -1,0 +1,12 @@
+<!doctype html><html lang="es"><meta charset="utf-8"><style>*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,sans-serif;background:#0b1020;color:#e8ecf6}
+.card{width:1200px;height:675px;padding:48px 56px;display:flex;flex-direction:column;gap:18px;background:radial-gradient(1200px 600px at 100% 0%,#1d2b5a 0%,#0b1020 60%)}
+h1{font-size:40px;margin:0}h2{font-size:22px;margin:0;color:#9fb0d9;font-weight:600}.row{display:flex;gap:18px}
+.box{flex:1;background:#121a33;border:1px solid #26335f;border-radius:16px;padding:20px 22px}.box h3{margin:0 0 10px;font-size:18px;color:#8fd3ff;text-transform:uppercase;letter-spacing:.06em}
+.box p,.box li{font-size:19px;line-height:1.45;margin:4px 0}ul{padding-left:20px;margin:0}.mono{font-family:ui-monospace,Menlo,monospace;font-size:16px;color:#c7d2fe}
+.tag{display:inline-block;font-size:13px;font-weight:700;padding:3px 9px;border-radius:999px;margin-right:8px}.fork{background:#3b2a00;color:#ffcc4d;border:1px solid #6b4d00}.sep{background:#003b2a;color:#5dffb3;border:1px solid #00704d}
+.box p.big{font-size:64px;font-weight:800;margin:0}.foot{margin-top:auto;font-size:15px;color:#7f8bb0}.ok{color:#5dffb3}</style><body><div class="card"><h1>Cuánto riesgo tiene la posición</h1><h2><span class="tag fork">FORK</span>0,0592 AAPLc (≈ US$20,33) de colateral · 5 USDC de deuda</h2>
+<div class="row"><div class="box"><h3>Health factor</h3><p class="big">3,17</p><p>Por debajo de 1 te liquidan.</p></div>
+<div class="box"><h3>Precio de liquidación</h3><p class="big">US$108</p><p>AAPL en el oráculo: US$343,43</p></div>
+<div class="box"><h3>Margen</h3><p class="big">−68%</p><p>Caída de AAPL que dispara la liquidación.</p></div></div>
+<div class="box"><p>Holgado: la acción tendría que caer ~68% para que te liquiden. Factor de colateral 78% (= LTV máx = umbral de liquidación en Aave v4). El agente no puede pedir más de 5 USDC: el contrato lo rechaza.</p></div>
+<div class="foot">Datos leídos del spoke Coinbase Stocks de Aave v4 en un fork local de Base (bloque 53124300). No es mainnet.</div></div></body></html>

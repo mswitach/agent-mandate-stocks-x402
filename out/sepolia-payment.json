@@ -1,0 +1,45 @@
+{
+  "red": "Base Sepolia (testnet real, chainId 84532)",
+  "endpoint": "https://wallets-demo-seller-server.calebgcarithers.workers.dev/weather?location=Buenos%20Aires",
+  "at": "2026-10-26T18:16:39.247Z",
+  "agent": "0x96Ca3B1Bd7c2be0C8d5D47Dee3bAC3d23A3ef86E",
+  "user": "0xD79690aeB13325c2Fc85399e893437d8B39E8e44",
+  "mandate": {
+    "user": "0xD79690aeB13325c2Fc85399e893437d8B39E8e44",
+    "agent": "0x96Ca3B1Bd7c2be0C8d5D47Dee3bAC3d23A3ef86E",
+    "action": "2",
+    "reserveId": "0",
+    "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+    "maxAmount": "2000",
+    "recipient": "0xCBd4E4218B2Cd8300f1bd07b9B4B720fAb6B51B3",
+    "validUntil": "1793124555",
+    "nonce": "0x0e74caacb81cef8a08af8bed4a033427612b425758f4a2cf32b2ecce69833ad0"
+  },
+  "mandateSig": "0x0250a16d5dabc84d5bd9e52d3c93ccdf11400defa7f64bdcac1b05ec71424e402736f50d52c36f64851f7aa49c9f1a0bfe7046466c285a08aaf05191de3684f01b",
+  "requirements": {
+    "scheme": "exact",
+    "network": "eip155:84532",
+    "amount": "1000",
+    "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+    "payTo": "0xCBd4E4218B2Cd8300f1bd07b9B4B720fAb6B51B3",
+    "maxTimeoutSeconds": 300,
+    "extra": {
+      "name": "USDC",
+      "version": "2"
+    }
+  },
+  "httpStatus": 200,
+  "responseBody": "{\"location\":{\"name\":\"Buenos Aires\",\"country\":\"Argentina\",\"countryCode\":\"AR\",\"admin1\":\"Buenos Aires F.D.\",\"latitude\":-34.61315,\"longitude\":-58.37723,\"timezone\":\"America/Argentina/Buenos_Aires\"},\"current\":{\"time\":\"2026-10-26T15:15\",\"temperatureC\":15.2,\"apparentTemperatureC\":13.9,\"relativeHumidity\":65,\"precipitationMm\":0,\"weatherCode\":3,\"condition\":\"overcast\",\"windSpeedKmh\":10.1,\"windDirectionDegrees\":46},\"units\":{\"temperature\":\"°C\",\"apparentTemperature\":\"°C\",\"relativeHumidity\":\"%\",\"precipitation\":\"mm\",\"windSpeed\":\"km/h\",\"windDirection\":\"°\"},\"source\":\"open-meteo\",\"fetchedAt\":\"2026-10-26T18:16:40.652Z\"}",
+  "settle": {
+    "success": true,
+    "payer": "0x96Ca3B1Bd7c2be0C8d5D47Dee3bAC3d23A3ef86E",
+    "transaction": "0x55f966b0ab4c195cd5cf142b7522f4fee7bcd88a71cd265f34d1db24ab3024e8",
+    "network": "eip155:84532"
+  },
+  "txHash": "0x55f966b0ab4c195cd5cf142b7522f4fee7bcd88a71cd265f34d1db24ab3024e8",
+  "basescan": "https://sepolia.basescan.org/tx/0x55f966b0ab4c195cd5cf142b7522f4fee7bcd88a71cd265f34d1db24ab3024e8",
+  "receiptStatus": "success",
+  "blockNumber": "50583663",
+  "balanceBefore": "20",
+  "balanceAfter": "19.999"
+}

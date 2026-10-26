@@ -1,0 +1,303 @@
+{
+  "red": "FORK LOCAL de Base mainnet (anvil, chainId 8453). Nada de esto se transmitió a la red real.",
+  "forkBlock": 53124300,
+  "upstream": "https://base-rpc.publicnode.com",
+  "at": "2026-10-26T20:31:17.041Z",
+  "contracts": {
+    "spoke": "0x17905Db0e4A3514467539956c084180616AE7B8D",
+    "aaplc": "0xb200000000000000000000C2e324d24d7eEcd1fb",
+    "usdc": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "oracle": "0xaBaf048fD7675Ea34a84332371ffd5D55E322A47",
+    "positionManager": "0x9c3f48b26c6cfe24bddc709e1cd148d0bbf35050"
+  },
+  "actors": {
+    "user": "0xE3Fd3DD03BbCeCbf5Fa26e2deb773F7904d259B8",
+    "agent": "0x91528bC86dB94a4fA9b636D462Baf1FBE07d0341",
+    "sellerPayTo": "0x8d3b609414F0d69ba2f99574F85b00F6b06Fd509",
+    "facilitator": "0x46b56fa3428C39FdffD1E794d58bf28898f3078F",
+    "holderImpersonado": "0xBc9050D78d2D8d88F7536AF49d4007aEf469d7B4"
+  },
+  "fork_only_shortcuts": [
+    "Position manager activado con anvil_setStorageAt (slot 7 de Spoke), un atajo de fork. Sin probar en mainnet, sin auditar. En mainnet ya hay position managers nativos de v4 activos en este spoke y un mandato podría montarse encima, pero no está probado.",
+    "AAPLc obtenido impersonando un holder real (anvil_impersonateAccount).",
+    "ETH de gas creado con anvil_setBalance."
+  ],
+  "mandates": {
+    "supply": {
+      "user": "0xE3Fd3DD03BbCeCbf5Fa26e2deb773F7904d259B8",
+      "agent": "0x91528bC86dB94a4fA9b636D462Baf1FBE07d0341",
+      "action": 0,
+      "reserveId": "0",
+      "asset": "0xb200000000000000000000C2e324d24d7eEcd1fb",
+      "maxAmount": "5920000",
+      "recipient": "0xE3Fd3DD03BbCeCbf5Fa26e2deb773F7904d259B8",
+      "validUntil": "1793124349",
+      "nonce": "0xe53df1142b04c13db61090fbb068d940867c03853dfaa5ee11cebd382fa26fe6"
+    },
+    "borrow": {
+      "user": "0xE3Fd3DD03BbCeCbf5Fa26e2deb773F7904d259B8",
+      "agent": "0x91528bC86dB94a4fA9b636D462Baf1FBE07d0341",
+      "action": 1,
+      "reserveId": "7",
+      "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+      "maxAmount": "5000000",
+      "recipient": "0x91528bC86dB94a4fA9b636D462Baf1FBE07d0341",
+      "validUntil": "1793124349",
+      "nonce": "0x306754c681e0a4e2e5141237e9bc5fa77ad8da268a31845fdf9b53d454c45b65"
+    },
+    "pay": {
+      "user": "0xE3Fd3DD03BbCeCbf5Fa26e2deb773F7904d259B8",
+      "agent": "0x91528bC86dB94a4fA9b636D462Baf1FBE07d0341",
+      "action": 2,
+      "reserveId": "0",
+      "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+      "maxAmount": "2000",
+      "recipient": "0x8d3b609414F0d69ba2f99574F85b00F6b06Fd509",
+      "validUntil": "1793124349",
+      "nonce": "0x509cba6b0f96b83a9d536ca74a39df9d2d1d7389ff9a10e227fb9a106fb720bb"
+    }
+  },
+  "mandateSigs": {
+    "supply": "0x43db76bb9132a7cb50c6856d05aa37a97c45f2aa8dd7f8f3e5556dc58f55e19e6ff120fb108407d549d033a953d931989862ef0461997d9f2d62099237f8c0161c",
+    "borrow": "0x249eb7b6aba622381729c61355f170424798fc28fb5301420438998f9fe5d0a85567c82249a6b56a7c158736620a7cca8222f482900d15874b692e99a1e849551c",
+    "pay": "0xc2f2c2fbfd0064f77309aa8bd867442188d8ba3a73f8069f8d301f39d7e24b7a67bb308d5a57b3382fe1a11599217b4da6761bc31b660fe4bf932dc5586065a41b"
+  },
+  "receipts": [
+    {
+      "kind": "supply",
+      "chain": "fork",
+      "label": "Depositar colateral",
+      "receipt": {
+        "mandateHash": "0x6a3b5f646a1b507f7813493b3817d4350fbb87c3f8fb2e5f7c13aa040ab73d17",
+        "user": "0xE3Fd3DD03BbCeCbf5Fa26e2deb773F7904d259B8",
+        "agent": "0x91528bC86dB94a4fA9b636D462Baf1FBE07d0341",
+        "action": 0,
+        "asset": "0xb200000000000000000000C2e324d24d7eEcd1fb",
+        "amount": "5920000",
+        "recipient": "0xE3Fd3DD03BbCeCbf5Fa26e2deb773F7904d259B8",
+        "chainId": "8453",
+        "txHash": "0xf386814b712ee43a5f4ca1acfd4bc18f60cc9337205886034fa3a3eef5070c07",
+        "blockNumber": "53124305"
+      },
+      "agentSig": "0x8435bbe5a106c047a35b442834e4e3c1129788ad58e9571d64584f2b6122b29038ea953185267de59b0542079dc4c1caeea76312a9d072d9c936669aeeaca5cd1c"
+    },
+    {
+      "kind": "borrow",
+      "chain": "fork",
+      "label": "Pedir prestado",
+      "receipt": {
+        "mandateHash": "0x45ff8fa656bc20f844f67c054dcac7004c7459b50915e5797f1bea58d883fc49",
+        "user": "0xE3Fd3DD03BbCeCbf5Fa26e2deb773F7904d259B8",
+        "agent": "0x91528bC86dB94a4fA9b636D462Baf1FBE07d0341",
+        "action": 1,
+        "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "amount": "5000000",
+        "recipient": "0x91528bC86dB94a4fA9b636D462Baf1FBE07d0341",
+        "chainId": "8453",
+        "txHash": "0x45ee080aa8a500ff712fa8420c833e338f97fbd62a3f0f3ed74cc2272d533932",
+        "blockNumber": "53124306"
+      },
+      "agentSig": "0x51fe28b3f01a86a6e53a4e0297e5f7fdd87917cdf59f870b80721d0d74206d2374185172ee69fbb19c2c65db8f621f8931cc4ad014ed11ed6d4421fddf432ac01b"
+    },
+    {
+      "kind": "pay",
+      "chain": "fork",
+      "label": "Pagar endpoint x402",
+      "receipt": {
+        "mandateHash": "0x6f98cda729c68ad57dcbfeae336f20d0fdb981445a35bac16ec6e44f4d6d3890",
+        "user": "0xE3Fd3DD03BbCeCbf5Fa26e2deb773F7904d259B8",
+        "agent": "0x91528bC86dB94a4fA9b636D462Baf1FBE07d0341",
+        "action": 2,
+        "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "amount": "1000",
+        "recipient": "0x8d3b609414F0d69ba2f99574F85b00F6b06Fd509",
+        "chainId": "8453",
+        "txHash": "0xd6afea5669889b8300cd82bd6500b9b255848d5b6c6aac7381baf378249776a8",
+        "blockNumber": "53124307"
+      },
+      "agentSig": "0x4c7eda82a8dc24320f51872f041b0714fe632ff0448bc64a0e85252bea347c0a7258072a13b0ce7d9619e526f6b593f42ddffa04280e511232389eda516c8b2d1c"
+    }
+  ],
+  "steps": [
+    {
+      "at": "2026-10-26T20:31:12.053Z",
+      "title": "Fork reseteado y wallets descartables creadas (ETH de gas solo en el fork)",
+      "chain": "fork",
+      "block": 53124300,
+      "user": "0xE3Fd3DD03BbCeCbf5Fa26e2deb773F7904d259B8",
+      "agent": "0x91528bC86dB94a4fA9b636D462Baf1FBE07d0341"
+    },
+    {
+      "at": "2026-10-26T20:31:12.777Z",
+      "title": "MandatePositionManager desplegado y activado por escritura de storage (solo fork)",
+      "chain": "fork",
+      "txHash": "0xef246dcb1852250e1966d2e117d980407a707db39fe77ff8af164dd58ac49a2d",
+      "pm": "0x9c3f48b26c6cfe24bddc709e1cd148d0bbf35050",
+      "pmActive": true
+    },
+    {
+      "at": "2026-10-26T20:31:13.270Z",
+      "title": "Usuario recibe 0.0592 AAPLc (holder impersonado, solo fork)",
+      "chain": "fork",
+      "txHash": "0x0cc8714f4f319125445658a12359762afa3c3d39649eb2cf8d92933055f0ec5a"
+    },
+    {
+      "at": "2026-10-26T20:31:13.726Z",
+      "title": "Usuario aprueba AAPLc y habilita el position manager en su posición",
+      "chain": "fork",
+      "txHash": "0x2dfee3c9e232b0750c66896af0b2d6e8e064a00e925ff76fe1dc01581c7a9885",
+      "approveTx": "0x5722e149a86a114eb23f2afb4c20cd5222a3e24185ff28d8038b1091a77142f6"
+    },
+    {
+      "at": "2026-10-26T20:31:13.733Z",
+      "title": "Usuario firma 3 mandatos EIP-712 (depositar, pedir prestado, pagar)",
+      "chain": "fork"
+    },
+    {
+      "at": "2026-10-26T20:31:14.910Z",
+      "title": "Agente deposita 0.0592 AAPLc como colateral en Aave v4 (Coinbase Stocks) a nombre del usuario",
+      "chain": "fork",
+      "txHash": "0xf386814b712ee43a5f4ca1acfd4bc18f60cc9337205886034fa3a3eef5070c07"
+    },
+    {
+      "at": "2026-10-26T20:31:16.671Z",
+      "title": "Agente pide prestado 5 USDC (deuda del usuario, USDC al agente)",
+      "chain": "fork",
+      "txHash": "0x45ee080aa8a500ff712fa8420c833e338f97fbd62a3f0f3ed74cc2272d533932"
+    },
+    {
+      "at": "2026-10-26T20:31:16.676Z",
+      "title": "Prueba negativa: pedir más del tope revierte on-chain",
+      "chain": "fork",
+      "result": "CapExceeded"
+    },
+    {
+      "at": "2026-10-26T20:31:16.691Z",
+      "title": "HF 3.172 · precio de liquidación AAPL ≈ US$108.25",
+      "chain": "fork",
+      "risk": {
+        "hf": 3.1724844382803026,
+        "collateralUSD": 20.331056,
+        "debtUSD": 4.99867694973519,
+        "ltvActual": 0.24586410807855674,
+        "cf": 0.78,
+        "price": 343.43,
+        "liqPrice": 108.25270594540865,
+        "caidaParaLiquidar": 0.6847896279856722,
+        "nivel": "bajo",
+        "texto": "Holgado: la acción tendría que caer ~68% para que te liquiden."
+      }
+    },
+    {
+      "at": "2026-10-26T20:31:17.036Z",
+      "title": "Agente paga 0,001 USDC al endpoint x402 local, liquidado con transferWithAuthorization en el fork",
+      "chain": "fork",
+      "txHash": "0xd6afea5669889b8300cd82bd6500b9b255848d5b6c6aac7381baf378249776a8",
+      "httpStatus": 200,
+      "txFrom": "0x46b56fa3428c39fdffd1e794d58bf28898f3078f",
+      "events": [
+        {
+          "event": "AuthorizationUsed",
+          "authorizer": "0x91528bC86dB94a4fA9b636D462Baf1FBE07d0341",
+          "nonce": "0x27b7ecafa37dd7c19404781ff74a016cadbec8ffbc93f050652f86f10432a7a5"
+        },
+        {
+          "event": "Transfer",
+          "from": "0x91528bC86dB94a4fA9b636D462Baf1FBE07d0341",
+          "to": "0x8d3b609414F0d69ba2f99574F85b00F6b06Fd509",
+          "value": "1000"
+        }
+      ],
+      "rejectedOtherPayTo": [
+        "Destino no autorizado: 0x56e1352040E03af59F802d79410E24F22F5443F0"
+      ]
+    }
+  ],
+  "x402": {
+    "requirements": {
+      "scheme": "exact",
+      "network": "eip155:8453",
+      "amount": "1000",
+      "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+      "payTo": "0x8d3b609414F0d69ba2f99574F85b00F6b06Fd509",
+      "maxTimeoutSeconds": 300,
+      "extra": {
+        "name": "USD Coin",
+        "version": "2"
+      }
+    },
+    "response": "{\"ticker\":\"AAPLc\",\"precioOracleAaveUSD\":343.43,\"bloque\":\"53124307\",\"fuente\":\"oráculo de Aave v4 en el fork\"}",
+    "settle": {
+      "success": true,
+      "transaction": "0xd6afea5669889b8300cd82bd6500b9b255848d5b6c6aac7381baf378249776a8",
+      "network": "eip155:8453",
+      "payer": "0x91528bC86dB94a4fA9b636D462Baf1FBE07d0341"
+    },
+    "facilitatorLog": [
+      {
+        "at": "2026-10-26T20:31:16.703Z",
+        "step": "402"
+      },
+      {
+        "at": "2026-10-26T20:31:16.706Z",
+        "step": "402"
+      },
+      {
+        "at": "2026-10-26T20:31:16.823Z",
+        "step": "verify",
+        "result": {
+          "isValid": true,
+          "payer": "0x91528bC86dB94a4fA9b636D462Baf1FBE07d0341"
+        }
+      },
+      {
+        "at": "2026-10-26T20:31:17.024Z",
+        "step": "settle",
+        "result": {
+          "success": true,
+          "transaction": "0xd6afea5669889b8300cd82bd6500b9b255848d5b6c6aac7381baf378249776a8",
+          "network": "eip155:8453",
+          "payer": "0x91528bC86dB94a4fA9b636D462Baf1FBE07d0341"
+        },
+        "authorization": {
+          "from": "0x91528bC86dB94a4fA9b636D462Baf1FBE07d0341",
+          "to": "0x8d3b609414F0d69ba2f99574F85b00F6b06Fd509",
+          "value": "1000",
+          "validAfter": "0",
+          "validBefore": "1793046976",
+          "nonce": "0x27b7ecafa37dd7c19404781ff74a016cadbec8ffbc93f050652f86f10432a7a5"
+        }
+      }
+    ]
+  },
+  "balances": {
+    "agentUsdcBefore": "5000000",
+    "agentUsdcAfter": "4999000",
+    "sellerUsdc": "1000",
+    "pmUsdc": "0",
+    "pmAaplc": "0",
+    "supplied": "5920000",
+    "debt": "5000001"
+  },
+  "accountData": {
+    "riskPremium": "0",
+    "avgCollateralFactor": "780000000000000000",
+    "healthFactor": "3172484438280302353",
+    "totalCollateralValue": "2033105600000000000000000000",
+    "totalDebtValueRay": "499867658565922307872374941505039998474230000000000000",
+    "activeCollateralCount": "1",
+    "borrowCount": "1"
+  },
+  "risk": {
+    "hf": 3.1724844382803026,
+    "collateralUSD": 20.331056,
+    "debtUSD": 4.99867694973519,
+    "ltvActual": 0.24586410807855674,
+    "cf": 0.78,
+    "price": 343.43,
+    "liqPrice": 108.25270594540865,
+    "caidaParaLiquidar": 0.6847896279856722,
+    "nivel": "bajo",
+    "texto": "Holgado: la acción tendría que caer ~68% para que te liquiden."
+  }
+}
